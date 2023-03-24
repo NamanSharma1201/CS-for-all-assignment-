@@ -1,0 +1,37 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include<bits/stdc++.h>
+using namespace std;
+int abs(int x){
+    if(x >= 0) return x;
+    return -x;
+}
+int main(){
+#ifndef ONLINE_JUDGE
+	freopen("input.txt" , "r" ,stdin);
+	freopen("output.txt" , "w" ,stdout);
+#endif
+	int arr[5][5];
+	int x , y;
+	for (int i = 0; i < 5; ++i)
+	{
+		for (int j = 0; j < 5; ++j)
+		{
+			cin >> arr[i][j];
+			if(arr[i][j]){
+				x = i;
+				y = j;
+			}
+		}
+	}
+	
+
+	cout << abs(x-2) +abs(y-2);
+
+}
