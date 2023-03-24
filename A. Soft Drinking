@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+#ifndef ONLINE_JUDGE
+	freopen("input.txt" , "r" ,stdin);
+	freopen("output.txt" , "w" ,stdout);
+#endif
+	int ans = 0;
+	int no_of_friend , bottle ,capacity , lime, slice ,tot_salt ,glass_capacity, swadanusar_namak;
+	cin >> no_of_friend >> bottle >> capacity >> lime >> slice >> tot_salt >> glass_capacity >>swadanusar_namak ;
+	int tot_glass = (capacity*bottle) / glass_capacity;
+	// cout << tot_glass << endl;
+	int nimbu = lime*slice;
+	// cout << nimbu << endl;
+	int namak = tot_salt / swadanusar_namak;
+	// cout << namak << endl;
+	int toast = min(namak , min(tot_glass,nimbu));
+	cout << toast / no_of_friend;
+
+}
